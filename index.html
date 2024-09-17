@@ -10,8 +10,14 @@
             display: none;
         }
         #webcam, #output_canvas { margin: auto; }
-        #gesture_output { margin-top: 20px; }
-        #webcamButton { margin-top: 20px; display: block; margin: auto; }
+        #gesture_output { margin-top: 20px; width: 100%;}
+        #webcamButton {
+            position: absolute;
+            bottom: 200px;
+            left: 45%;
+             display: block;
+              margin: auto;
+             }
         #protectedContent, #unlockedImage, #birthdayCard {
             margin-top: 20px;
         }
@@ -46,12 +52,21 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        #aaa {
+            width: 480px;
+            height: 360px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
 <h1>Gesture-Based Password Unlock</h1>
-<video id="webcam" autoplay playsinline width="480" height="360"></video>
-<canvas id="output_canvas" width="480" height="360"></canvas>
+
+<div id="aaa" style="position: relative;">
+    <video id="webcam" style="position: absolute" autoplay playsinline width="480" height="360"></video>
+    <canvas class="output_canvas" id="output_canvas" style="position: absolute; left: 0px; top: 0px;" width="640" height="480"></canvas>
+  </div>
+
 <div id="gesture_output"></div>
 <button id="webcamButton">ENABLE PREDICTIONS</button>
 <div id="protectedContent">
