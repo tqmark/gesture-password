@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture-Based Password Unlock</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #webcam, #output_canvas, #gesture_output, #protectedContent, #unlockedImage, #birthdayCard {
+            display: none;
+        }
+        #webcam, #output_canvas { margin: auto; }
+        #gesture_output { margin-top: 20px; }
+        #webcamButton { margin-top: 20px; display: block; margin: auto; }
+        #protectedContent, #unlockedImage, #birthdayCard {
+            margin-top: 20px;
+        }
+        #unlockedImage, #birthdayCard {
+            justify-content: center;
+            align-content: center;
+        }
+        #birthdayCard {
+            text-align: center;
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        #birthdayCard h2 {
+            color: #ff4081;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        #birthdayCard p {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.5;
+        }
+        #birthdayCard img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Gesture-Based Password Unlock</h1>
+<video id="webcam" autoplay playsinline width="480" height="360"></video>
+<canvas id="output_canvas" width="480" height="360"></canvas>
+<div id="gesture_output"></div>
+<button id="webcamButton">ENABLE PREDICTIONS</button>
+<div id="protectedContent">
+    <h2>Protected Content</h2>
+    <p>This content is unlocked by a specific sequence of gestures.</p>
+</div>
+<div id="unlockedImage">
+    <img src="img.png" height="1280" width="1280"/>
+</div>
+<div id="birthdayCard">
+    <h2>Happy Birthday!</h2>
+    <p>We have your birthdays in 4 years and I’m very excited about it! I know it’s been tough for us to navigate through all our challenges, but I have to admit that I’ve truly enjoyed our journey together. From where we started to where we are now, it’s been a remarkable ride. I hope we grow old together, exploring new places overseas, and creating more cherished memories. Your old moto will always remind us of our past adventures, while your new moto will be a symbol of our future journeys. I’m so happy to be with you.</p>
+    <img src="birthday_image.png" alt="Birthday Image">
+</div>
+<script type="module" src="index.js"></script>
+</body>
+</html>
